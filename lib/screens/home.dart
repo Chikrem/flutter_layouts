@@ -6,11 +6,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(         
-          child: Header(),
-        ),
+    return const Scaffold(
+      body: Column(
+        children: <Widget> [
+          Header(),
+        ],
       ),
     );
   }
