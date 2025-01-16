@@ -3,7 +3,7 @@ import 'package:flutter_layouts/components/box_card.dart';
 import 'package:flutter_layouts/components/sections/header.dart';
 
 class Home extends StatelessWidget {
-  Home({super.key});
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
