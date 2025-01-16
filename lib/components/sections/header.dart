@@ -15,31 +15,30 @@ class Header extends StatelessWidget {
         ),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(10.0),),
       ),
-      child: const Padding(
+      child: Padding(
         padding:
-            EdgeInsets.only(top: 80.0, left: 16.0, right: 16.0, bottom: 16.0),
+            const EdgeInsets.only(top: 80.0, left: 16.0, right: 16.0, bottom: 16.0),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text.rich(
               TextSpan(
                 text: '\$',
-                style: TextStyle(fontSize: 16.00),
+                // style: TextStyle(fontSize: 16.00),
                 children: [
                   TextSpan(
                     text: '1000.00',
-                    style:
-                        TextStyle(fontSize: 28.00, fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ],
               ),
             ),
-            Text(
+            const Text(
               'Available Balance',
-              style: TextStyle(fontSize: 16.00),
+              // style: TextStyle(fontSize: 16.00),
             ),
           ]),
-          Icon(
+          const Icon(
             Icons.account_circle,
             size: 42.00,
           ),
