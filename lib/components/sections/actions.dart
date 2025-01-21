@@ -16,18 +16,27 @@ class AccountActions extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            BoxCard(
-                boxContent: _AccountActionContent(
-                    icon: Icons.attach_money, title: 'Depositar')),
-            BoxCard(
-                boxContent: _AccountActionContent(
-                    icon: Icons.attach_money, title: 'Depositar')),
-            BoxCard(
-                boxContent: _AccountActionContent(
-                    icon: Icons.attach_money, title: 'Depositar')),
+            InkWell(
+              onTap: (){},
+              child: const BoxCard(
+                  boxContent: _AccountActionContent(
+                      icon: Icons.account_balance_wallet, title: 'Depositar')),
+            ),
+            InkWell(
+              onTap: (){},
+              child: const BoxCard(
+                  boxContent: _AccountActionContent(
+                      icon: Icons.cached, title: 'Transferir')),
+            ),
+            InkWell(
+              onTap: (){},
+              child: const BoxCard(
+                  boxContent: _AccountActionContent(
+                      icon: Icons.center_focus_strong, title: 'Ler')),
+            ),
           ],
         ),
       ]),
@@ -43,14 +52,18 @@ class _AccountActionContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 8),
-          child: Icon(icon),
-        ),
-        Text(title),
-      ],
+    return Container(
+      width: 72,
+      child:
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Icon(icon),
+            ),
+            Text(title),
+          ],
+        )
     );
   }
 }
