@@ -88,9 +88,10 @@ class _RecentActivityContent extends StatelessWidget {
         ),
 
         /// Text
-TextButton(
-  onPressed: (){}, 
-child: Text('Diga-me como!', style: TextStyle(fontSize: 16)))      ],
+        TextButton(
+            onPressed: () {},
+            child: const Text('Diga-me como!', style: TextStyle(fontSize: 16)))
+      ],
     );
   }
 }
